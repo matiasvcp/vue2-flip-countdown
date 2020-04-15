@@ -212,8 +212,8 @@ export default {
 
       var date = new Date( xmlHttp.getResponseHeader("Date") ); 
 
-      //console.log("La fecha del servidor vale: ");
-      //console.log(date.getTime() );
+      console.log("La fecha del servidor vale: ");
+      console.log(date.getTime() );
 
       return date.getTime();
 
