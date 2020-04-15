@@ -59,7 +59,7 @@ export default {
   data() {
     const uuid = uuidv4()
     return {
-      now: Math.trunc(new Date().getTime() / 1000),
+      now: Math.trunc(this.obtenerFecha() / 1000),
       date: null,
       interval: null,
       diff: 0,
@@ -102,7 +102,7 @@ export default {
       throw new Error("Invalid props value, correct the 'deadline'")
     }
     this.interval = setInterval(() => {
-      this.now = Math.trunc(new Date().getTime() / 1000)
+      this.now = Math.trunc(this.obtenerFecha() / 1000)
     }, 1000)
   },
   mounted() {
