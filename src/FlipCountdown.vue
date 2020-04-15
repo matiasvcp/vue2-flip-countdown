@@ -202,19 +202,12 @@ export default {
 
     },
     obtenerFecha(){
-     //let uri = this.currentUrl + '../../../fechaServidor';
+
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open('HEAD',window.location.href.toString(),false);
       xmlHttp.setRequestHeader("Content-Type", "text/html");
       xmlHttp.send('');
-
-
-
-      var date = new Date( xmlHttp.getResponseHeader("Date") ); 
-
-      console.log("La fecha del servidor vale: ");
-      console.log(date.getTime() );
-
+      var date = new Date( xmlHttp.getResponseHeader("Date") );
       return date.getTime();
 
     }
