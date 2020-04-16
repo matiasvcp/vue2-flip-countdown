@@ -135,7 +135,7 @@ export default {
     now(value) {
       this.diff = this.date - this.now
       
-      if(this.diff < 60 ){ this.$emit('ultimominuto', this.diff); }
+      if(this.diff > 0){ this.$emit('ultimominuto', this.diff); }
       
       if (this.diff <= 0 || this.stop) {
         this.diff = 0
