@@ -37,7 +37,6 @@ const uuidv4 = require("uuid/v4")
 export default {
   name: "flipCountdown",
   props: {
-    urlfecha: "",
     deadline: {
       type: String
     },
@@ -206,7 +205,6 @@ export default {
 
     },
     obtenerFecha(){
-      console.log(this.urlfecha);
       var xmlHttp = new XMLHttpRequest();
       xmlHttp.open('HEAD', "http://miguelreal.local/date.txt",false);
       xmlHttp.setRequestHeader("Content-Type", "text/html");
