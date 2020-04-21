@@ -207,7 +207,7 @@ export default {
     obtenerFecha(){
 
       var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open('HEAD',"https://www.miguelreal.com.ar/date.txt",false);
+      xmlHttp.open('HEAD',"http://miguelreal.local/date.txt",false);
       xmlHttp.setRequestHeader("Content-Type", "text/html");
       xmlHttp.send('');
       var date = new Date( xmlHttp.getResponseHeader("Date") );
