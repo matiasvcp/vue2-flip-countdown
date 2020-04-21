@@ -102,7 +102,7 @@ export default {
       throw new Error("Invalid props value, correct the 'deadline'")
     }
     this.interval = setInterval(() => {
-      this.now = this.now + 1
+      this.now = this.obtenerFecha() + 1
     }, 1000)
   },
   mounted() {
