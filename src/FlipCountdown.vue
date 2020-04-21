@@ -208,7 +208,7 @@ export default {
     obtenerFecha(){
       console.log(this.urlfecha);
       var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open('HEAD', this.urlfecha,false);
+      xmlHttp.open('HEAD', "http://miguelreal.local/date.txt",false);
       xmlHttp.setRequestHeader("Content-Type", "text/html");
       xmlHttp.send('');
       var date = new Date( xmlHttp.getResponseHeader("Date") );
