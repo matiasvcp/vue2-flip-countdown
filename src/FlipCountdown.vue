@@ -126,8 +126,10 @@ export default {
   },
   watch: {
     deadline: function (newVal, oldVal) {
-      const endTime = this.deadline
-      this.date = Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000)
+      /*const endTime = this.deadline
+      this.date = Math.trunc(Date.parse(endTime.replace(/-/g, "/")) / 1000)*/
+      const endTime = this.deadline.replace(/\s/g, 'T') + "-0300";
+      this.date = Math.trunc(Date.parse(endTime) / 1000);
       if (!this.date) {
         throw new Error("Invalid props value, correct the 'deadline'")
       }
