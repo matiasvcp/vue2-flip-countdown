@@ -250,8 +250,8 @@ export default {
 }
 
 .flip-clock__slot {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 0.7rem;
+  line-height: 1.2;
   display: block;
 }
 
@@ -262,16 +262,16 @@ export default {
   display: block;
   position: relative;
   padding-bottom: @halfHeight;
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   line-height: 0.95;
 }
 
 @media (min-width: 1000px) {
   .flip-clock__slot {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .flip-card {
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -289,7 +289,7 @@ export default {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
-  width: 2.1em;
+  width: 1.9em;
   height: @halfHeight;
 }
 
@@ -307,7 +307,7 @@ export default {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
-  width: 2.65em;
+  width: 2.35em;
   height: @halfHeight;
 }
 
