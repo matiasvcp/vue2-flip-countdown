@@ -262,11 +262,11 @@ export default {
   display: block;
   position: relative;
   padding-bottom: @halfHeight;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 0.95;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1400px) {
   .flip-clock__slot {
     font-size: 1rem;
   }
