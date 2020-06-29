@@ -36,6 +36,7 @@ export default {
     const uuid = uuidv4()
     return {
       now: Math.trunc(this.obtenerFecha() / 1000),
+      parinpar: 0,
       date: null,
       interval: null,
       diff: 0,
@@ -78,9 +79,14 @@ export default {
       throw new Error("Invalid props value, correct the 'deadline'")
     }
     this.interval = setInterval(() => {
-      var date = new Date();
-   /* this.now = Math.trunc(this.obtenerFecha() / 1000) + 1*/
-      this.now = Math.trunc(date.getTime() / 1000) + 1;
+     /* var date = new Date();*/
+      if(this.parinpar/10 == 0)
+      this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
+      else
+      this.now = Math.trunc(this.now / 1000) + 1;
+      
+      this.parinpar = this.parinpar ++;
+      
     }, 1000)
   },
   mounted() {
