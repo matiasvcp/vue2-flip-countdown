@@ -1,36 +1,8 @@
 <template>
   <div class="container flip-clock">
-    <div class="d-row">
-      <div class="p-2 " >Reloj nuevo</div>
+    <div class="d-flex justify-content-center">
       <div class="p-2 " v-for="data in timeData">{{data.current | twoDigits}}</div>
     </div>
-    <template
-      v-for="data in timeData"
-      v-show="show"
-    >
-      <span
-        v-bind:key="data.label"
-        class="flip-clock__piece"
-        :id="data.elementId"
-      >
-        <span class="flip-clock__card flip-card">
-          <b class="flip-card__top">{{data.current | twoDigits}}</b>
-          <b
-            class="flip-card__bottom"
-            v-bind:data-value="data.current | twoDigits"
-          ></b>
-          <b
-            class="flip-card__back"
-            v-bind:data-value="data.previous | twoDigits"
-          ></b>
-          <b
-            class="flip-card__back-bottom"
-            v-bind:data-value="data.previous | twoDigits"
-          ></b>
-        </span>
-        <span class="flip-clock__slot">{{data.label}}</span>
-      </span>
-    </template>
   </div>
 </template>
 
