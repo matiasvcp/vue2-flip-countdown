@@ -80,12 +80,16 @@ export default {
     }
     this.interval = setInterval(() => {
      /* var date = new Date();*/
-      if(this.parinpar/10 == 0)
+      if(this.parinpar%10 == 0){
+      console.log("par in par vale" + this.parinpar);
+      console.log("par in par vale2" + (this.parinpar%10));
       this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
-      else
+      }
+      else{
       this.now = Math.trunc(this.now / 1000) + 1;
+      }
       
-      this.parinpar = this.parinpar ++;
+      this.parinpar = this.parinpar + 1;
       
     }, 1000)
   },
