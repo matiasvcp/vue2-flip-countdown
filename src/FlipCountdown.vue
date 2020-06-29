@@ -1,6 +1,7 @@
 <template>
   <div class="container flip-clock">
     <div class="d-row">
+      <div class="p-2 " >Reloj nuevo</div>
       <div class="p-2 " v-for="data in timeData">{{data.current | twoDigits}}</div>
     </div>
     <template
