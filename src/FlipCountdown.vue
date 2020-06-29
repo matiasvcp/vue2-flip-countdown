@@ -171,7 +171,7 @@ export default {
         }
 
         if (idx === 0) {
-          const els = el.querySelectorAll('span b')
+          const els = 0; //el.querySelectorAll('span b')
           if (els) {
             for (let e of els) {
               const cls = e.classList[0]
