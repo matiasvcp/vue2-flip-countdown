@@ -1,7 +1,7 @@
 <template>
   <div class="container flip-clock">
     <div class="d-flex justify-content-center">
-      <div class="p-2 " v-for="data in timeData">{{data.current | twoDigits}}</div>
+      <div class="p-2 font-weight-bold text-danger" v-for="data in timeData"><h4>{{data.current | twoDigits}}</h4></div>
     </div>
   </div>
 </template>
