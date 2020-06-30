@@ -4,10 +4,10 @@
       <div class="pt-2 pr-2 pl-2 font-weight-bold text-danger" style="margin-bottom: 0px;" v-for="data in timeData"><h4 style="margin-bottom: 0px;">{{data.current | twoDigits}}</h4></div>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="p-1 text-danger" ><small>Días</small></div>
-      <div class="p-1 text-danger" ><small>Horas</small></div>
-      <div class="p-1 text-danger" ><small>Minutos</small></div>
-      <div class="p-1 text-danger" ><small>Segundos</small></div>
+      <div class="pr-1 pl-1 pb-1 text-danger" ><small>Días</small></div>
+      <div class="pr-1 pl-1 pb-1 text-danger" ><small>Horas</small></div>
+      <div class="pr-1 pl-1 pb-1 text-danger" ><small>Minutos</small></div>
+      <div class="pr-1 pl-1 pb-1 text-danger" ><small>Segundos</small></div>
     </div>
   </div>
 </template>
