@@ -36,7 +36,8 @@ export default {
           seconds: "Seconds"
         }
       }
-    }
+    },
+    contar : Number,
   },
   data() {
     const uuid = uuidv4()
@@ -86,10 +87,10 @@ export default {
     }
     this.interval = setInterval(() => {
      /* var date = new Date();*/
-      if(this.parinpar%10 == 0){
-      //console.log("par in par vale" + this.parinpar);
-      //console.log("par in par vale2" + (this.parinpar%10));
-      this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
+      if(this.parinpar%10 == 0 && this.contar == 1){
+        //console.log("par in par vale" + this.parinpar);
+        //console.log("par in par vale2" + (this.parinpar%10));
+        this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
       }
       else{
       this.now = this.now + 1;
