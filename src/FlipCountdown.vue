@@ -204,13 +204,14 @@ export default {
 
     },
     obtenerFecha(){
-      var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open('HEAD', "../../date.txt",false);
-      xmlHttp.setRequestHeader("Content-Type", "text/html");
-      xmlHttp.send('');
-      var date = new Date( xmlHttp.getResponseHeader("Date") );
-      return date.getTime();
-
+      if(this.contar == 1){ 
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open('HEAD', "../../date.txt",false);
+        xmlHttp.setRequestHeader("Content-Type", "text/html");
+        xmlHttp.send('');
+        var date = new Date( xmlHttp.getResponseHeader("Date") );
+        return date.getTime();
+      } else { return false; }
     }
   },
   beforeDestroy() {
