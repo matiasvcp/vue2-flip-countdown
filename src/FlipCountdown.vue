@@ -37,7 +37,7 @@ export default {
         }
       }
     },
-    contar : Number,
+
   },
   data() {
     const uuid = uuidv4()
@@ -87,9 +87,9 @@ export default {
     }
     this.interval = setInterval(() => {
      /* var date = new Date();*/
-        console.log("El contar vale antes del if: " + this.contar);
-      if(this.parinpar%10 == 0 && this.contar == 1){
-        console.log("El contar vale: " + this.contar);
+
+      if(this.parinpar%10 == 0){
+
         //console.log("par in par vale" + this.parinpar);
         //console.log("par in par vale2" + (this.parinpar%10));
         this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
@@ -204,15 +204,12 @@ export default {
 
     },
     obtenerFecha(){
-      if(this.contar == 1){ 
-        console.log("entro: " +  this.contar);
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open('HEAD', "../../date.txt",false);
         xmlHttp.setRequestHeader("Content-Type", "text/html");
         xmlHttp.send('');
         var date = new Date( xmlHttp.getResponseHeader("Date") );
         return date.getTime();
-      } else { return false; }
     }
   },
   beforeDestroy() {
