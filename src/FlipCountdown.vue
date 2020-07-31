@@ -87,7 +87,9 @@ export default {
     }
     this.interval = setInterval(() => {
      /* var date = new Date();*/
+        console.log("El contar vale antes del if: " + this.contar);
       if(this.parinpar%10 == 0 && this.contar == 1){
+        console.log("El contar vale: " + this.contar);
         //console.log("par in par vale" + this.parinpar);
         //console.log("par in par vale2" + (this.parinpar%10));
         this.now = Math.trunc(this.obtenerFecha() / 1000) + 1;
