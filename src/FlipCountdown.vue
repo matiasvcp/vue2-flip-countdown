@@ -205,6 +205,7 @@ export default {
     },
     obtenerFecha(){
       if(this.contar == 1){ 
+        console.log("entro: " +  this.contar);
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open('HEAD', "../../date.txt",false);
         xmlHttp.setRequestHeader("Content-Type", "text/html");
