@@ -205,7 +205,8 @@ export default {
     },
     obtenerFecha(){
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open('HEAD', "../../date.txt",false);
+        xmlHttp.open('HEAD', "../../../../date.txt?_=" + new Date().getTime(),false);
+        xmlHttp.setRequestHeader("Cache-Control", "no-cache, no-store, max-age=0");
         xmlHttp.setRequestHeader("Content-Type", "text/html");
         xmlHttp.send('');
         var date = new Date( xmlHttp.getResponseHeader("Date") );
